@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Estilo Hermanos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #0c2340;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0c2340;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .order-form {
+      max-width: 400px;
+      margin: 0 auto 50px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      direction: rtl;
+    }
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .order-form input,
+    .order-form select,
+    .order-form button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .order-form button {
+      background-color: #0c2340;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Los Estilo Hermanos</header>
+
+  <div class="gallery">
+    <img src="polo.jpg" alt="Polo أخضر">
+    <img src="polo2.jpg" alt="Polo أبيض">
+    <img src="polo3.jpg" alt="Polo كحلي">
+    <img src="polo4.jpg" alt="Polo أسود">
+  </div>
+
+  <form class="order-form" action="https://formspree.io/f/mzzgrelo" method="POST">
+    <h2>طلب القميص</h2>
+    <input type="hidden" name="product" value="قميص Polo">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="text" name="address" placeholder="العنوان" required>
+    <input type="text" name="phone" placeholder="رقم الهاتف" required>
+    <select name="size" required>
+      <option value="">اختر المقاس</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+    <select name="color" required>
+      <option value="">اختر اللون</option>
+      <option>أخضر</option>
+      <option>أبيض</option>
+      <option>أزرق</option>
+      <option>أسود</option>
+    </select>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+
+</body>
+</html>
